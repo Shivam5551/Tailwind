@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 const PrintTable = ({ orderId, status, transactionId, refundDate, orderAmt }) => {
 return (
-    <div className="grid grid-cols-3 gap-4 border-b-2 py-2 lg:grid-cols-5">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 border-b-2 py-2 lg:grid-cols-5">
     <div className="text-blue-600 font-semibold">{orderId}</div>
     <div className="flex items-center gap-2"><div className={`p-1 w-fit rounded-full ${status === "Successful" ? "bg-green-500" : status === "Unsuccessful" ? "bg-red-600" : "bg-gray-400"}`}/> {status}</div>
-    <div>{transactionId}</div>
+    <div className="hidden md:block">{transactionId}</div>
     <div className="hidden lg:block">{refundDate}</div>
     <div className="hidden lg:block">{orderAmt}</div>
     </div>
@@ -43,7 +43,7 @@ const tableData = [
 ];
 
 return (
-    <div className="flex rounded-xl flex-col ml-8 mr-8 bg-white p-4">
+    <div className="flex rounded-xl overflow-clip flex-col ml-8 mr-8 bg-white p-4">
     <div className="relative mb-4 w-full flex justify-between">
         <div className="absolute inset-y-0 left-0 flex w-fit items-center ps-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"     className="size-6 h-4 w-5">
@@ -52,10 +52,10 @@ return (
         </div>
         <input
         placeholder="Order ID or Transaction ID"
-        className="p-2 ps-9 w-1/2 bg-slate-100 border rounded-full border-gray-400"
+        className="p-2 ps-9 w-full sm:w-1/2 bg-slate-100 border rounded-full border-gray-400"
         />
         <div className="flex gap-2">
-            <button className="bg-white hover:bg-slate-100 flex items-center p-2 border rounded-2xl hover:rounded-full transition-all duration-200 border-gray-400">Sort By 
+            <button className="bg-white hover:bg-slate-100 hidden sm:flex items-center p-2 border rounded-2xl  hover:rounded-full transition-all duration-200 border-gray-400">Sort By 
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
                 </svg>
@@ -67,10 +67,10 @@ return (
             </button>
         </div>
     </div>
-    <div className="grid grid-cols-3 gap-4 font-bold border-b-2 pb-2 lg:grid-cols-5">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 font-bold border-b-2 pb-2 lg:grid-cols-5">
         <div>Order ID</div>
         <div>Status</div>
-        <div>Transaction ID</div>
+        <div className="hidden md:block">Transaction ID</div>
         <div className="hidden lg:block">Refund Date</div>
         <div className="hidden lg:block">Order Amount</div>
     </div>

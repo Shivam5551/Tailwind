@@ -7,7 +7,7 @@ export const Cards = ()=> {
         <div className="flex flex-col">
             <div className="p-4 flex justify-between items-center">
                 <div className="font-semibold text-2xl">Overview</div>
-                <button className="cursor-pointer flex gap-2 border p-2 rounded-md shadow-sm">
+                <button className="cursor-pointer hidden sm:flex gap-2 border p-2 rounded-md shadow-sm">
                     This Month
                     <div className="flex flex-col justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -35,11 +35,11 @@ export const Cards = ()=> {
           <div className="pt-4 font-semibold text-xl">
               Trascations | This Month
           </div>
-          <div className="col-span-1">
-            <button disabled className="cursor-wait mr-4 items-center text-gray-800 bg-slate-200 font-mono font-medium p-2 pl-4 pr-4 rounded-full">
+          <div className="col-span-2 sm:col-span-1">
+            <button disabled className="cursor-wait mr-4 mt-2 items-center text-gray-800 bg-slate-200 font-mono font-medium p-2 pl-4 pr-4 rounded-full">
               Payouts (22)
             </button>
-            <button className="bg-blue-500 items-center text-white font-mono font-medium p-2 pl-4 pr-4 rounded-full hover:bg-blue-700">
+            <button className="bg-blue-500 items-center mt-2 text-white font-mono font-medium p-2 pl-4 pr-4 rounded-full hover:bg-blue-700">
               Refunds (5)
             </button>
           </div>
