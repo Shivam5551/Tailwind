@@ -9,7 +9,7 @@ function App() {
   return (
     <Fragment>
       <div className="w-screen flex flex-row">
-        <div  ref={sideBarRef} className="hidden md:block h-full w-3/12 fixed">
+        <div  ref={sideBarRef} className="hidden bg-slate-900/95 md:block h-full w-3/12 fixed">
           <SideBar/>
         </div>
       <div className="flex flex-col w-full md:w-9/12 ml-auto bg-stone-100">

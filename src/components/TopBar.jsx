@@ -5,11 +5,11 @@ export const TopBar = ({reference})=> {
     const [isOpen, setIsOpen] = useState(false);
     const toggleSideBar = () => {
         if(isOpen) {
-            reference.current.className = "hidden md:flex";
+            reference.current.className = "hidden w-fit md:w-3/12 fixed bg-slate-900/95 md:flex";
         }
         if (reference && reference.current && !isOpen) {
             // console.log("hovered")
-          reference.current.className = "block md:flex";
+          reference.current.className = "block w-fit md:w-3/12 fixed bg-slate-900/95 md:flex";
           reference.current.style.zIndex = "2";
         }
         setIsOpen(!isOpen);
